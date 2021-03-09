@@ -1,24 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Steak_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nZE-14-Tpw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="4dn-79-4nd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rare" translatesAutoresizingMaskIntoConstraints="NO" id="qpk-UM-R1i">
+                                                <rect key="frame" x="0.0" y="20" width="414" height="204"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="tVZ-lh-uL0" appends="YES" id="jVE-xQ-6NG"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="cs1-jX-8JH"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="cs1-jX-8JH" firstAttribute="bottom" secondItem="qpk-UM-R1i" secondAttribute="bottom" id="N4r-pg-spT"/>
+                                            <constraint firstItem="qpk-UM-R1i" firstAttribute="leading" secondItem="cs1-jX-8JH" secondAttribute="leading" id="bcA-0W-MC2"/>
+                                            <constraint firstItem="qpk-UM-R1i" firstAttribute="top" secondItem="4dn-79-4nd" secondAttribute="top" constant="20" id="drE-bH-k2x"/>
+                                            <constraint firstItem="qpk-UM-R1i" firstAttribute="trailing" secondItem="cs1-jX-8JH" secondAttribute="trailing" id="nhy-Qp-Vcq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="MxV-Fs-n4S">
+                                        <rect key="frame" x="0.0" y="224" width="414" height="224"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Vgs-Nn-HyD">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="9WX-a6-Utw" appends="YES" id="K68-q5-F8N"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="tWM-sg-ITr"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Vgs-Nn-HyD" firstAttribute="top" secondItem="MxV-Fs-n4S" secondAttribute="top" id="4IT-47-xZt"/>
+                                            <constraint firstItem="Vgs-Nn-HyD" firstAttribute="leading" secondItem="tWM-sg-ITr" secondAttribute="leading" id="5V7-2M-Ttr"/>
+                                            <constraint firstItem="tWM-sg-ITr" firstAttribute="bottom" secondItem="Vgs-Nn-HyD" secondAttribute="bottom" id="lqM-qt-vdT"/>
+                                            <constraint firstItem="Vgs-Nn-HyD" firstAttribute="trailing" secondItem="tWM-sg-ITr" secondAttribute="trailing" id="m7R-pL-dLp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="2ge-Xe-5yM">
+                                        <rect key="frame" x="0.0" y="448" width="414" height="224"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wellDone" translatesAutoresizingMaskIntoConstraints="NO" id="ZxZ-WY-3sn">
+                                                <rect key="frame" x="0.0" y="8" width="414" height="216"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="gVg-5i-2aD" appends="YES" id="2lV-Kx-fMX"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="57Z-uP-yIl"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="57Z-uP-yIl" firstAttribute="bottom" secondItem="ZxZ-WY-3sn" secondAttribute="bottom" id="KeT-AP-IIw"/>
+                                            <constraint firstItem="57Z-uP-yIl" firstAttribute="trailing" secondItem="ZxZ-WY-3sn" secondAttribute="trailing" id="O3g-Ua-dGQ"/>
+                                            <constraint firstItem="ZxZ-WY-3sn" firstAttribute="top" secondItem="57Z-uP-yIl" secondAttribute="top" constant="8" id="YzL-0m-RB4"/>
+                                            <constraint firstItem="ZxZ-WY-3sn" firstAttribute="leading" secondItem="57Z-uP-yIl" secondAttribute="leading" id="viN-Jk-jqn"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V9d-GY-98g">
+                                        <rect key="frame" x="0.0" y="672" width="414" height="224"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NmZ-Hh-dtq">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="4"/>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steak Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKj-0j-UB3">
+                                                <rect key="frame" x="0.0" y="4" width="414" height="220"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nZE-14-Tpw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DE6-GB-BcJ"/>
+                            <constraint firstItem="nZE-14-Tpw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NcW-8T-nnE"/>
+                            <constraint firstAttribute="bottom" secondItem="nZE-14-Tpw" secondAttribute="bottom" id="lKf-bz-1At"/>
+                            <constraint firstItem="nZE-14-Tpw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qSQ-FW-lYT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="outputLabel" destination="wKj-0j-UB3" id="cY0-C3-OY5"/>
+                        <outlet property="progressBar" destination="NmZ-Hh-dtq" id="p7V-vD-P5X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tVZ-lh-uL0">
+                    <connections>
+                        <action selector="rareImageTapped:" destination="BYZ-38-t0r" id="iL4-fx-9sO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="9WX-a6-Utw">
+                    <connections>
+                        <action selector="mediumImageTapped:" destination="BYZ-38-t0r" id="s9A-g1-0CW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gVg-5i-2aD">
+                    <connections>
+                        <action selector="wellDoneImageTaped:" destination="BYZ-38-t0r" id="ogQ-xi-vIP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="650.72463768115949" y="12.723214285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="medium" width="570" height="666"/>
+        <image name="rare" width="570" height="666"/>
+        <image name="wellDone" width="570" height="666"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
