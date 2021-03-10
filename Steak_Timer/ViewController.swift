@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let timer = Timer(timeInterval: 1.0, repeats: true) { _ in print("DING DING!") }
+        let timer = Timer(timeInterval: 1.0, repeats: true) { _ in print("Steak is ready!") }
     }
     
     @objc func updateTimer() {
