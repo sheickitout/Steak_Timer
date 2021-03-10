@@ -7,8 +7,17 @@
 
 import UIKit
 
+
+import AVFoundation
+
+var player: AVAudioPlayer?
+
 class ViewController: UIViewController {
+    
     var steakTimer = ["rare":3, "medium":7, "wellDone":8]
+    var startTime = 0
+    var totalTime = 0
+    var timer = Timer()
     
     @IBAction func rareImageTapped(_ sender: Any) {
         //test
@@ -21,7 +30,17 @@ class ViewController: UIViewController {
        
         print("well-done")
     }
-    
+    @IBAction func buttonPressed(_ sender: Any) {
+        let tenderness = (sender as AnyObject).currentTitle!
+        startTime = 0
+        totalTime = steakTimer[(tenderness ?? tenderness)!]!
+        
+        progressBar.progress = 0.0
+
+        timer.invalidate()
+        outputLabel.text = tenderness
+       timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
     
     @IBOutlet weak var outputLabel: UILabel!
     
@@ -36,7 +55,7 @@ class ViewController: UIViewController {
     @objc func updateTimer() {
         if startTime < totalTime {
             startTime += 1
-            progressLabel.progress = Float((startTime))/Float((totalTime))
+            progressBar.progress = Float((startTime))/Float((totalTime))
         }
         else {
             outputLabel.text = "Done"
@@ -47,7 +66,7 @@ class ViewController: UIViewController {
                 player = sound
                 sound.play()
             } catch {
-                //
+                
             }
             timer.invalidate()
             
